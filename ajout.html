@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajout d’un habit</title>
+  <link rel="stylesheet" href="mesStyles.css">
+  <script src="controles.js" defer></script>
+</head>
+<body class="page-formulaire">
+  <main class="conteneur-form">
+    <div class="titre-page"><span class="petit-symbole">✦</span><div><p class="surtitre">GESTION DE LA COLLECTION</p><h1>Ajouter un habit</h1><p class="intro">Enregistrez une nouvelle tenue traditionnelle dans votre collection.</p></div></div>
+    <div class="visuel-form"><img src="boutique-tunisienne.png" alt="Collection de caftans et habits traditionnels tunisiens"><div><strong>Le charme de la tradition</strong><span>Des tenues uniques pour vos plus beaux événements.</span></div></div>
+
+    <form id="formAjout" onsubmit="return verif1();">
+      <fieldset>
+        <legend>Informations sur l’habit</legend>
+        <div class="groupe">
+          <label for="categorie">Catégorie</label>
+          <select id="categorie" name="categorie">
+            <option value="">Sélectionner une catégorie</option>
+            <option value="1">Robe de soirée</option>
+            <option value="2">Robe de mariée</option>
+            <option value="3">Caftan</option>
+            <option value="4">Costume</option>
+            <option value="5">Jebba</option>
+          </select>
+        </div>
+        <div class="groupe">
+          <label for="description">Description</label>
+          <input type="text" id="description" name="description" placeholder="Ex. Caftan brodé à la main">
+          <small>De 10 à 100 caractères, en commençant et en terminant par une lettre.</small>
+        </div>
+        <div class="groupe">
+          <span class="label">Taille</span>
+          <div class="choix-tailles">
+            <label><input type="radio" name="taille" value="S"> S</label>
+            <label><input type="radio" name="taille" value="M"> M</label>
+            <label><input type="radio" name="taille" value="L"> L</label>
+            <label><input type="radio" name="taille" value="X"> XL</label>
+          </div>
+        </div>
+        <div class="groupe">
+          <label for="prix">Prix de location</label>
+          <div class="prix-ligne"><input type="number" id="prix" name="prix" min="100" max="2000" placeholder="Ex. 250"><span>DT</span></div>
+        </div>
+        <div class="actions">
+          <button type="reset" class="btn btn-secondaire">Annuler</button>
+          <button type="submit" class="btn btn-principal">Ajouter <span>→</span></button>
+        </div>
+      </fieldset>
+    </form>
+    <p class="note-bas">Tous les champs sont obligatoires.</p>
+  </main>
+</body>
+</html>
